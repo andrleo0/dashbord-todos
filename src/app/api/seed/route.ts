@@ -1,7 +1,12 @@
 import prisma from '@/app/lib/prisma';
-import { NextResponse, NextRequest } from 'next/server'
+import { 
+    NextResponse, 
+    // NextRequest 
+} from 'next/server'
 
-export async function GET(request: Request) {
+export async function GET(
+    // request: Request
+) {
 
     await prisma.todo.deleteMany(); // delete  * from todo
 

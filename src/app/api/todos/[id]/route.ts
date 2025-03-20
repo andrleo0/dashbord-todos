@@ -1,6 +1,9 @@
 import prisma from '@/app/lib/prisma';
 import { Todo } from '@prisma/client';
-import { NextResponse, NextRequest } from 'next/server'
+import { 
+  NextResponse, 
+  // NextRequest 
+} from 'next/server'
 import * as yup from 'yup';
 
 interface Segments {
@@ -16,7 +19,9 @@ const getTodo = async(id:string):Promise<Todo | null> => {
   return todo;
 }
 
-export async function GET(request: Request, { params }: Segments) {
+export async function GET(
+  // request: Request, 
+  { params }: Segments) {
 
   const { id }  = await params;
   const todo = await getTodo(id);

@@ -22,6 +22,8 @@ npx prisma generate
 npx prisma init 
 npx prisma migrate dev
 npx prisma generate
+npx prisma db pull
+npx prisma db push
 ```
 
 # Prod
@@ -30,5 +32,8 @@ npx prisma generate
 # Stage
 
 
-# comment
-next, node , postgres son carpetas que puedo borrar
+# comments
+* next, node , postgres son carpetas que puedo borrar
+* repetir el ```npx prisma generate``` luego de un ```npx prisma db pull```
+* cuidado con el ```npx prisma migrate dev``` porque limpia toda la base de datos
+* cuidado con el ```npx prisma db push``` porque hace los cambios sin pasar por el comando ```npx prisma migrate dev```
