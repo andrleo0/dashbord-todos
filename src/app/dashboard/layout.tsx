@@ -11,7 +11,7 @@ export default function DashboardLayout({
       <Sidebar />
         
       {/* Main Layout content - Contenido principal del Layout */}
-      <div className="ml-auto -mt-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] min-h-screen bg-[#722F37]">
+      <div className="ml-auto -mt-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] min-h-screen bg-[#722F37] ">
 
         <TopMenu />
       
