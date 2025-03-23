@@ -44,3 +44,21 @@ export async function POST(request: Request) {
     }   
 
 }
+
+
+export async function DELETE(request: Request) {
+
+    try {
+    
+        const todo = await prisma.todo.deleteMany({ where: {completed:true} });
+    
+        return NextResponse.json({
+            message: `Se eliminaron los todos completados` 
+        });
+        
+    } catch (error) {
+
+        return NextResponse.json( error , { status: 400 });
+    }   
+
+}
